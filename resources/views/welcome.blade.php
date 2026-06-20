@@ -81,7 +81,7 @@
 
                     {{-- Central photo circle --}}
                     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[312px] h-[312px] rounded-full overflow-hidden" style="box-shadow: 0 30px 60px -36px rgba(20,50,38,0.45);">
-                        <div class="w-full h-full bg-accent-soft"></div>
+                        <img src="{{ asset('images/hero-podcaster-crop.png') }}" alt="Podcaster recording" class="w-full h-full object-cover">
                     </div>
 
                     {{-- Player card --}}
@@ -146,17 +146,17 @@
     <section class="py-[clamp(56px,9vw,104px)]">
         <div class="max-w-[1160px] mx-auto px-[clamp(20px,5vw,40px)]">
             <h2 class="font-display font-semibold text-[clamp(28px,4.4vw,46px)] leading-[1.08] tracking-[-0.02em] max-w-[16em]" style="text-wrap: balance;">
-                Most podcast hosting is built for platforms, not podcasters.
+                Most podcast hosting wastes your time before you've even hit publish.
             </h2>
             <div class="mt-[clamp(36px,5vw,56px)] grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-[clamp(24px,4vw,44px)]">
                 <div class="border-t-2 border-hairline-strong pt-[18px]">
-                    <p class="text-lg leading-normal text-[#3c3b35]">Dashboards that bury the one number you came in for.</p>
+                    <p class="text-lg leading-normal text-[#3c3b35]">Confusing upload flows that take longer than recording did.</p>
                 </div>
                 <div class="border-t-2 border-hairline-strong pt-[18px]">
-                    <p class="text-lg leading-normal text-[#3c3b35]">Download counts you have to export to a spreadsheet to make sense of.</p>
+                    <p class="text-lg leading-normal text-[#3c3b35]">Storage limits that bite right when an episode finally takes off.</p>
                 </div>
                 <div class="border-t-2 border-hairline-strong pt-[18px]">
-                    <p class="text-lg leading-normal text-[#3c3b35]">Storage and bandwidth limits that bite right when an episode finally takes off.</p>
+                    <p class="text-lg leading-normal text-[#3c3b35]">Pricing pages that need a calculator.</p>
                 </div>
             </div>
         </div>
@@ -202,28 +202,30 @@
         <div class="max-w-[1160px] mx-auto px-[clamp(20px,5vw,40px)]">
             <div class="max-w-[34em]">
                 <h2 class="font-display font-semibold text-[clamp(28px,4.4vw,46px)] leading-[1.08] tracking-[-0.02em]" style="text-wrap: balance;">Fair from the first episode.</h2>
-                <p class="text-lg leading-[1.55] text-muted mt-4" style="text-wrap: pretty;">Storage and bandwidth are included on every plan, with no surprise overages.</p>
+                <p class="text-lg leading-[1.55] text-muted mt-4" style="text-wrap: pretty;">Generous storage and bandwidth included on every plan, with no surprise overages.</p>
             </div>
 
             <div class="mt-[clamp(36px,5vw,56px)] grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-[18px] items-stretch">
 
                 <div class="bg-white border border-hairline rounded-[20px] p-[30px]">
                     <div class="font-display font-semibold text-[15px] text-muted tracking-[0.01em]">Free</div>
-                    <div class="flex items-baseline gap-1.5 mt-3.5"><span class="font-display font-bold text-[44px] tracking-tight">£0</span><span class="text-[15px] text-faint">/ forever</span></div>
+                    <div class="flex items-baseline gap-1.5 mt-3.5"><span class="font-display font-bold text-[44px] tracking-tight">&pound;0</span><span class="text-[15px] text-faint">/ forever</span></div>
                     <p class="mt-4 text-[15px] leading-normal text-muted">Get your show live and listed everywhere podcasts are played. No card needed.</p>
                 </div>
 
                 <div class="bg-accent-soft border-[1.5px] border-accent rounded-[20px] p-[30px] relative">
                     <span class="absolute -top-3 left-[30px] bg-accent text-white text-xs font-semibold tracking-wide rounded-full px-3 py-[5px]">Ideal for most shows</span>
                     <div class="font-display font-semibold text-[15px] text-accent-deep tracking-[0.01em]">Pro</div>
-                    <div class="flex items-baseline gap-1.5 mt-3.5"><span class="font-display font-bold text-[44px] tracking-tight text-ink-strong">£9</span><span class="text-[15px] text-on-soft-muted">/ month</span></div>
+                    <div class="flex items-baseline gap-1.5 mt-3.5"><span class="font-display font-bold text-[44px] tracking-tight text-ink-strong">&pound;10</span><span class="text-[15px] text-on-soft-muted">/ month</span></div>
                     <p class="mt-4 text-[15px] leading-normal text-on-soft">For shows building an audience, with more storage and the full download dashboard.</p>
+                    <p class="mt-4 text-[13px] leading-normal text-on-soft">Paid annually. &pound;12/month when paid monthly.</p>
                 </div>
 
                 <div class="bg-white border border-hairline rounded-[20px] p-[30px]">
                     <div class="font-display font-semibold text-[15px] text-muted tracking-[0.01em]">Studio</div>
-                    <div class="flex items-baseline gap-1.5 mt-3.5"><span class="text-[15px] text-faint">from</span><span class="font-display font-bold text-[44px] tracking-tight">£29</span><span class="text-[15px] text-faint">/ month</span></div>
+                    <div class="flex items-baseline gap-1.5 mt-3.5"><span class="text-[15px] text-faint">from</span><span class="font-display font-bold text-[44px] tracking-tight">&pound;30</span><span class="text-[15px] text-faint">/ month</span></div>
                     <p class="mt-4 text-[15px] leading-normal text-muted">For teams and multi-show studios, with shared access and priority support.</p>
+                    <p class="mt-4 text-[13px] leading-normal text-muted">Paid annually. &pound;36/month when paid monthly.</p>
                 </div>
 
             </div>

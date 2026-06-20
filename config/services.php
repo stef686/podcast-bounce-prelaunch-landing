@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    'kit' => [
+        'api_secret' => env('KIT_API_SECRET'),
+        'form_id' => env('KIT_FORM_ID'),
+        'tag_id' => env('KIT_TAG_ID'),
+    ],
+
 ];

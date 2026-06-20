@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\WaitlistSignup;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
@@ -14,8 +13,6 @@ class WaitlistController extends Controller
         $validated = $request->validate([
             'email' => ['required', 'email', 'max:255'],
         ]);
-
-        WaitlistSignup::firstOrCreate(['email' => $validated['email']]);
 
         $this->subscribeToKit($validated['email']);
 

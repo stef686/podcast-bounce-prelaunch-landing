@@ -41,4 +41,8 @@ return [
         'tag_id' => env('KIT_TAG_ID'),
     ],
 
+    'fathom' => [
+        'site_id' => env('FATHOM_SITE_ID'),
+    ],
+
 ];

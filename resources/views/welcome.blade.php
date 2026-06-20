@@ -10,9 +10,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @production
-    <!-- Fathom - beautiful, simple website analytics -->
-    <script src="https://cdn.usefathom.com/script.js" data-site="QNWVAFFM" defer></script>
-    <!-- / Fathom -->
+    <script src="https://cdn.usefathom.com/script.js" data-site="{{ config('services.fathom.site_id') }}" defer></script>
     @endproduction
 </head>
 <body class="bg-paper text-ink font-body antialiased overflow-x-hidden" style="-webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;">

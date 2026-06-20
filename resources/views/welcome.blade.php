@@ -21,10 +21,7 @@
                     <svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true" class="md:w-[22px] md:h-[22px]"><rect x="2" y="8" width="3.4" height="6" rx="1.7" fill="#0e9d6e"></rect><rect x="9.3" y="3" width="3.4" height="16" rx="1.7" fill="#0e9d6e"></rect><rect x="16.6" y="6" width="3.4" height="10" rx="1.7" fill="#15110d"></rect></svg>
                     <span class="font-display font-bold text-[17px] md:text-lg tracking-tight">Podcast Bounce</span>
                 </div>
-                <div class="flex items-center gap-6">
-                    <a href="#" class="hidden md:inline text-muted font-semibold text-[15px] hover:text-accent transition-colors no-underline">Blog</a>
-                    <a href="#join" class="text-ink font-semibold text-sm md:text-[15px] border border-input-border rounded-full px-[15px] py-2 md:px-[18px] md:py-[9px] hover:border-accent hover:bg-white transition-all no-underline"><span class="md:hidden">Join</span><span class="hidden md:inline">Join the waitlist</span></a>
-                </div>
+                <a href="#join" class="text-ink font-semibold text-sm md:text-[15px] border border-input-border rounded-full px-[15px] py-2 md:px-[18px] md:py-[9px] hover:border-accent hover:bg-white transition-all no-underline"><span class="md:hidden">Join</span><span class="hidden md:inline">Join the waitlist</span></a>
             </div>
         </div>
 
@@ -91,8 +88,8 @@
                         <div class="mt-[11px] flex items-center gap-[11px]">
                             <span class="w-[34px] h-[34px] rounded-full bg-accent flex items-center justify-center shrink-0"><svg width="13" height="13" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5l11 7-11 7z"></path></svg></span>
                             <div class="flex-1 min-w-0">
-                                <div class="flex items-center gap-[3px] h-[22px]">
-                                    <span class="flex-1 h-[38%] bg-accent rounded-sm"></span><span class="flex-1 h-[66%] bg-accent rounded-sm"></span><span class="flex-1 h-[90%] bg-accent rounded-sm"></span><span class="flex-1 h-[54%] bg-accent rounded-sm"></span><span class="flex-1 h-[78%] bg-accent rounded-sm"></span><span class="flex-1 h-[44%] bg-accent rounded-sm"></span><span class="flex-1 h-[96%] bg-accent rounded-sm"></span><span class="flex-1 h-[60%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[34%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[72%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[48%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[84%] bg-accent-border rounded-sm"></span>
+                                <div class="flex items-center gap-[2px] h-[22px]">
+                                    <span class="flex-1 h-[38%] bg-accent rounded-sm"></span><span class="flex-1 h-[58%] bg-accent rounded-sm"></span><span class="flex-1 h-[66%] bg-accent rounded-sm"></span><span class="flex-1 h-[42%] bg-accent rounded-sm"></span><span class="flex-1 h-[90%] bg-accent rounded-sm"></span><span class="flex-1 h-[72%] bg-accent rounded-sm"></span><span class="flex-1 h-[54%] bg-accent rounded-sm"></span><span class="flex-1 h-[82%] bg-accent rounded-sm"></span><span class="flex-1 h-[78%] bg-accent rounded-sm"></span><span class="flex-1 h-[44%] bg-accent rounded-sm"></span><span class="flex-1 h-[62%] bg-accent rounded-sm"></span><span class="flex-1 h-[96%] bg-accent rounded-sm"></span><span class="flex-1 h-[50%] bg-accent rounded-sm"></span><span class="flex-1 h-[60%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[34%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[76%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[48%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[72%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[40%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[84%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[56%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[68%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[44%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[36%] bg-accent-border rounded-sm"></span>
                                 </div>
                                 <div class="flex justify-between mt-1.5 font-mono text-[9.5px] text-faint"><span>12:04</span><span>38:21</span></div>
                             </div>

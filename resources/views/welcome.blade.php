@@ -57,6 +57,7 @@
                     @else
                         <form action="{{ route('waitlist.store') }}" method="POST" class="flex flex-col md:flex-row gap-2.5">
                             @csrf
+                            <input type="text" name="website" class="!absolute !-left-[9999px] !h-0 !w-0 !overflow-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
                             <input type="email" name="email" value="{{ old('email') }}" placeholder="you@yourshow.com" aria-label="Email address" required class="w-full md:flex-[1_1_220px] min-w-0 h-[52px] md:h-[54px] border border-input-border rounded-[13px] px-4 font-body text-base bg-white text-ink outline-none transition-all focus:border-accent focus:ring-[3px] focus:ring-accent/16">
                             <button type="submit" class="w-full md:w-auto bg-accent text-white border-none rounded-[13px] px-6 h-[52px] md:h-[54px] font-body font-semibold text-base cursor-pointer whitespace-nowrap transition-all hover:bg-accent-hover hover:-translate-y-px">Join the waitlist</button>
                         </form>
@@ -92,9 +93,7 @@
                         <div class="mt-[11px] flex items-center gap-[11px]">
                             <span class="w-[34px] h-[34px] rounded-full bg-accent flex items-center justify-center shrink-0"><svg width="13" height="13" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5l11 7-11 7z"></path></svg></span>
                             <div class="flex-1 min-w-0">
-                                <div class="flex items-center gap-[2px] h-[22px]">
-                                    <span class="flex-1 h-[38%] bg-accent rounded-sm"></span><span class="flex-1 h-[58%] bg-accent rounded-sm"></span><span class="flex-1 h-[66%] bg-accent rounded-sm"></span><span class="flex-1 h-[42%] bg-accent rounded-sm"></span><span class="flex-1 h-[90%] bg-accent rounded-sm"></span><span class="flex-1 h-[72%] bg-accent rounded-sm"></span><span class="flex-1 h-[54%] bg-accent rounded-sm"></span><span class="flex-1 h-[82%] bg-accent rounded-sm"></span><span class="flex-1 h-[78%] bg-accent rounded-sm"></span><span class="flex-1 h-[44%] bg-accent rounded-sm"></span><span class="flex-1 h-[62%] bg-accent rounded-sm"></span><span class="flex-1 h-[96%] bg-accent rounded-sm"></span><span class="flex-1 h-[50%] bg-accent rounded-sm"></span><span class="flex-1 h-[60%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[34%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[76%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[48%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[72%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[40%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[84%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[56%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[68%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[44%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[36%] bg-accent-border rounded-sm"></span>
-                                </div>
+                                <x-waveform :played="13" :total="24" />
                                 <div class="flex justify-between mt-1.5 font-mono text-[9.5px] text-faint"><span>12:04</span><span>38:21</span></div>
                             </div>
                         </div>
@@ -155,9 +154,7 @@
                         <div class="mt-3 flex items-center gap-[11px]">
                             <span class="w-9 h-9 rounded-full bg-accent flex items-center justify-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5l11 7-11 7z"></path></svg></span>
                             <div class="flex-1 min-w-0">
-                                <div class="flex items-center gap-[3px] h-6">
-                                    <span class="flex-1 h-[38%] bg-accent rounded-sm"></span><span class="flex-1 h-[66%] bg-accent rounded-sm"></span><span class="flex-1 h-[90%] bg-accent rounded-sm"></span><span class="flex-1 h-[54%] bg-accent rounded-sm"></span><span class="flex-1 h-[78%] bg-accent rounded-sm"></span><span class="flex-1 h-[44%] bg-accent rounded-sm"></span><span class="flex-1 h-[96%] bg-accent rounded-sm"></span><span class="flex-1 h-[60%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[34%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[72%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[48%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[84%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[40%] bg-accent-border rounded-sm"></span><span class="flex-1 h-[64%] bg-accent-border rounded-sm"></span>
-                                </div>
+                                <x-waveform :played="7" :total="14" gap="3px" height="24px" />
                                 <div class="flex justify-between mt-[7px] font-mono text-[10px] text-faint"><span>12:04</span><span>38:21</span></div>
                             </div>
                         </div>
@@ -312,6 +309,7 @@
                     @else
                         <form action="{{ route('waitlist.store') }}" method="POST" class="flex flex-col md:flex-row gap-2.5 md:justify-center">
                             @csrf
+                            <input type="text" name="website" class="!absolute !-left-[9999px] !h-0 !w-0 !overflow-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
                             <input type="email" name="email" value="{{ old('email') }}" placeholder="you@yourshow.com" aria-label="Email address" required class="w-full md:flex-[1_1_220px] min-w-0 h-[52px] md:h-[54px] border border-accent-border-2 rounded-[13px] px-4 font-body text-base bg-white text-ink outline-none transition-all focus:border-accent focus:ring-[3px] focus:ring-accent/18 text-center md:text-left">
                             <button type="submit" class="w-full md:w-auto bg-accent text-white border-none rounded-[13px] px-6 h-[52px] md:h-[54px] font-body font-semibold text-base cursor-pointer whitespace-nowrap transition-all hover:bg-accent-hover hover:-translate-y-px">Join the waitlist</button>
                         </form>
@@ -330,7 +328,7 @@
             <div class="flex items-center gap-2.5">
                 <svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true"><rect x="2" y="8" width="3.4" height="6" rx="1.7" fill="#0e9d6e"></rect><rect x="9.3" y="3" width="3.4" height="16" rx="1.7" fill="#0e9d6e"></rect><rect x="16.6" y="6" width="3.4" height="10" rx="1.7" fill="#15110d"></rect></svg>
                 <span class="font-display font-bold text-base">Podcast Bounce</span>
-                <span class="text-sm text-faint ml-1">&bull; Coming soon {{ date('Y') }}</span>
+                <span class="text-sm text-faint ml-1">&bull; Coming soon 2026</span>
             </div>
             {{-- <div class="flex items-center gap-[22px]">
                 <a href="#" class="text-muted text-sm font-medium hover:text-accent transition-colors no-underline">@podcastbounce</a>

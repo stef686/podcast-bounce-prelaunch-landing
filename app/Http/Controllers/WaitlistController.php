@@ -2,16 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Client\RequestException;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
 class WaitlistController extends Controller
 {
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
         $validated = $request->validate([
             'email' => ['required', 'email', 'max:255'],
+            'website' => ['max:0'],
         ]);
 
         $this->subscribeToKit($validated['email']);
@@ -26,6 +29,8 @@ class WaitlistController extends Controller
         $tagId = config('services.kit.tag_id');
 
         if (! $apiSecret || ! $formId || ! $tagId) {
+            Log::warning('Kit API config missing — waitlist signup skipped', ['email' => $email]);
+
             return;
         }
 
@@ -33,17 +38,31 @@ class WaitlistController extends Controller
             $kit = Http::withHeader('X-Kit-Api-Key', $apiSecret)
                 ->baseUrl('https://api.kit.com/v4');
 
-            $subscriberId = $kit->post('/subscribers', [
+            $response = $kit->post('/subscribers', [
                 'email_address' => $email,
                 'state' => 'inactive',
-            ])->throw()->json('subscriber.id');
+            ]);
+
+            if ($response->status() === 422) {
+                $subscriberId = $kit->get('/subscribers', [
+                    'email_address' => $email,
+                ])->throw()->json('subscribers.0.id');
+            } else {
+                $subscriberId = $response->throw()->json('subscriber.id');
+            }
+
+            if (! $subscriberId) {
+                Log::error('Kit API: could not resolve subscriber ID', ['email' => $email]);
+
+                return;
+            }
 
             $kit->post("/forms/{$formId}/subscribers/{$subscriberId}")
                 ->throw();
 
             $kit->post("/tags/{$tagId}/subscribers/{$subscriberId}")
                 ->throw();
-        } catch (\Exception $e) {
+        } catch (RequestException $e) {
             Log::error('Kit API subscription failed', [
                 'email' => $email,
                 'error' => $e->getMessage(),

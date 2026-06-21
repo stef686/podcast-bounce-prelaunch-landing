@@ -1,8 +1,11 @@
-@props(['played' => 13, 'total' => 24, 'gap' => '2px', 'height' => '22px'])
+@props(['played' => 13, 'total' => 24, 'gap' => 'gap-[2px]', 'height' => 'h-[22px]'])
 
-<div class="flex items-center gap-[{{ $gap }}] h-[{{ $height }}]">
+@php
+    $heights = ['h-[38%]', 'h-[58%]', 'h-[66%]', 'h-[42%]', 'h-[90%]', 'h-[72%]', 'h-[54%]', 'h-[82%]', 'h-[78%]', 'h-[44%]', 'h-[62%]', 'h-[96%]', 'h-[50%]', 'h-[60%]', 'h-[34%]', 'h-[76%]', 'h-[48%]', 'h-[72%]', 'h-[40%]', 'h-[84%]', 'h-[56%]', 'h-[68%]', 'h-[44%]', 'h-[36%]'];
+@endphp
+
+<div class="flex items-center {{ $gap }} {{ $height }}">
     @for ($i = 0; $i < $total; $i++)
-        @php $h = [38, 58, 66, 42, 90, 72, 54, 82, 78, 44, 62, 96, 50, 60, 34, 76, 48, 72, 40, 84, 56, 68, 44, 36][$i % 24]; @endphp
-        <span class="flex-1 h-[{{ $h }}%] {{ $i < $played ? 'bg-accent' : 'bg-accent-border' }} rounded-sm"></span>
+        <span class="flex-1 {{ $heights[$i % 24] }} {{ $i < $played ? 'bg-accent' : 'bg-accent-border' }} rounded-sm"></span>
     @endfor
 </div>

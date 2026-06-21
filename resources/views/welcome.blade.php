@@ -154,7 +154,7 @@
                         <div class="mt-3 flex items-center gap-[11px]">
                             <span class="w-9 h-9 rounded-full bg-accent flex items-center justify-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5l11 7-11 7z"></path></svg></span>
                             <div class="flex-1 min-w-0">
-                                <x-waveform :played="7" :total="14" gap="3px" height="24px" />
+                                <x-waveform :played="7" :total="14" gap="gap-[3px]" height="h-[24px]" />
                                 <div class="flex justify-between mt-[7px] font-mono text-[10px] text-faint"><span>12:04</span><span>38:21</span></div>
                             </div>
                         </div>
